@@ -2,6 +2,7 @@ module Resque
   module Plugins
     module JobStats
       module Duration
+        around_perform :around_perform_job_stats_duration
 
         # Resets all job durations
         def reset_job_durations
